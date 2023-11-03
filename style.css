@@ -2,14 +2,17 @@ body {
     padding: 0%;
     margin: 0%;
     text-align: center;
+
+
   }
   .container {
 
-    margin: auto;
+    margin:auto;
     /* border: 2px solid black; */
-    width: 1100px;
+    width: 1050px;
     display: grid;
     grid-template-columns: auto auto auto;
+  
   }
   .container div {
     /* border: 2px solid red; */
@@ -29,6 +32,7 @@ body {
     border: 2px solid rgb(161, 161, 161);
     border-radius: 5px;
     padding: 10px;
+    /* width: 140px; */
   }
   .heros p,
   .villains p {
@@ -55,4 +59,42 @@ body {
   .hero10{
     grid-column-start: 3;
   }
-  
+
+@media all and (max-width:1100px){
+  .container{
+    width: 800px;
+  }
+  .hero {
+    grid-template-columns: auto auto;
+  }
+  .villain {
+    grid-template-columns: auto auto;
+  }
+  .hero10{
+    grid-column-start: 2;
+  }
+}
+@media all and (max-width:750px){
+  .container{
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    place-items: center;
+
+  }
+  .hero {
+    grid-template-columns: auto auto;
+  }
+  .heros p,
+  .villains p {
+    font-size: 30px;
+  }
+  .villain {
+    grid-template-columns: auto auto;
+  }
+  .hero10{
+    grid-column-start: 0;
+  }
+  .heros, .villains{
+    width: 160px;
+  }
+}
